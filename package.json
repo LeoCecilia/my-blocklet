@@ -11,7 +11,7 @@
     "bundle": "tsc --noEmit && npm run bundle:client && npm run bundle:api",
     "bundle:client": "vite build",
     "bundle:api": "npm run clean && tsc -p tsconfig.api.json && blocklet bundle --compact --create-release",
-    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle --app-id zNKktuUywkdQ9AYKo4w686afReen3G3xHBVn",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "prepare": "npx simple-git-hooks",
     "bump-version": "zx --quiet scripts/bump-version.mjs"
@@ -49,7 +49,9 @@
     "cors": "^2.8.5",
     "dotenv-flow": "^4.1.0",
     "express": "^4.19.2",
-    "express-async-errors": "^3.1.1"
+    "express-async-errors": "^3.1.1",
+    "mongodb": "^6.8.0",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@arcblock/eslint-config": "^0.3.2",
@@ -66,6 +68,7 @@
     "bumpp": "^9.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
+    "express-validator": "^7.2.0",
     "import-sort-style-module": "^6.0.0",
     "lint-staged": "^15.2.7",
     "nodemon": "^3.1.4",

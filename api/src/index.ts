@@ -41,6 +41,12 @@ if (isProduction) {
   }));
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use(<ErrorRequestHandler>((err, _req, res, _next) => {
+  logger.error(err.stack);
+  res.status(500).send({ errorMsg: err.message, data: [] });
+}));
+
 const port = parseInt(process.env.BLOCKLET_PORT!, 10);
 
 export const server = app.listen(port, (err?: any) => {

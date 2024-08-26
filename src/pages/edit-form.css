@@ -1,0 +1,12 @@
+.form-item {
+  width: 60vh;
+  text-align: left;
+  margin-bottom: 10px;
+
+  label {
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+}

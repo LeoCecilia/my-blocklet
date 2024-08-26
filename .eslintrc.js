@@ -8,5 +8,10 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/require-default-props': 'off',
+    'import/export': 'off',
+    'import/prefer-default-export': 'off',
+    'react/function-component-definition': 'off',
+    'unicorn/filename-case': 'off',
   },
 };

@@ -1,5 +1,6 @@
 import middleware from '@blocklet/sdk/lib/middlewares';
 import { Router } from 'express';
+import { routes } from '../libs/profile';
 
 const router = Router();
 
@@ -10,5 +11,7 @@ router.use('/data', (_, res) =>
     message: 'Hello Blocklet!',
   }),
 );
+
+router.use('/profile', routes);
 
 export default router;
